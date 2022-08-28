@@ -1,0 +1,1 @@
+from .myhelpers import is_integer

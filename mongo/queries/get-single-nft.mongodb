@@ -1,0 +1,32 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// The current database to use.
+use('chiania');
+
+// Search for documents in the current collection.
+db.getCollection('items')
+  .find(
+    {
+      /*
+      * Filter
+      * fieldA: value or expression
+      */
+      nft_id : "nft1s554cd4kv8wyhp64lppvvntcfch55x0u8y7klpwdue0f4xxalreqrl89kn"
+    },
+    {
+      /*
+      * Projection
+      * _id: 0, // exclude _id
+      * fieldA: 1 // include field
+      */
+    }
+  )
+  .sort({
+    /*
+    * fieldA: 1 // ascending
+    * fieldB: -1 // descending
+    */
+  })
+  .limit(100)
+  ;

@@ -1,0 +1,9 @@
+use('chiania');
+
+// Search for documents in the current collection.
+db.getCollection('items')
+  .aggregate([
+    "count":{
+        "$sum":1
+    }
+  ])

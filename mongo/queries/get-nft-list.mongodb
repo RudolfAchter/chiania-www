@@ -1,0 +1,21 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// The current database to use.
+use('chiania');
+
+// Search for documents in the current collection.
+db.getCollection('items')
+  .find(
+    {
+      "ItemCategory" : "Herb"
+    },
+  )
+  .sort({
+    "Nr": 1, // ascending
+    "Name": 1 // descending
+
+  })
+  .skip(0)
+  .limit(100)
+  ;
